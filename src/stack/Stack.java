@@ -22,6 +22,15 @@ package stack;
 import interfaces.StackInterface;
 
 public class Stack implements StackInterface{
+	private int stacktop;
+	private int maxsize;
+	private Object[] stack;
+
+	public Stack(int size){
+		maxsize = size;
+		stacktop = -1;
+		stack = new Object[maxsize];
+	}
 
 	@Override
 	public void push(Object x) {
@@ -49,7 +58,7 @@ public class Stack implements StackInterface{
 
 	@Override
 	public boolean isFull() {
-		// TODO 
+		// TODO
 		return false;
 	}
 	
