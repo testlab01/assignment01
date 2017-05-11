@@ -19,6 +19,8 @@ limitations under the License.
 
 package stack;
 
+import java.util.Arrays;
+
 import interfaces.StackInterface;
 
 public class Stack implements StackInterface{
@@ -52,8 +54,11 @@ public class Stack implements StackInterface{
 
 	@Override
 	public Object peek() {
-		// TODO 
-		return null;
+		if(isEmpty() == true){
+			return null;
+		}else{
+			return stack[stacktop];
+		}
 	}
 
 	@Override
