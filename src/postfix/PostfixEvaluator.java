@@ -27,10 +27,6 @@ public class PostfixEvaluator implements PostfixInterface{
 	private String expr;
 	private int lenOfExpr;
 
-	public PostfixEvaluator(){
-		//TODO
-	}
-
 	@Override
 	//TODO What the hell you are doing prahveen -_- , is it good one
 	public int evaluate(String postfixExpresion) {
