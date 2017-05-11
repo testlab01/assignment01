@@ -58,8 +58,7 @@ public class Stack implements StackInterface{
 
 	@Override
 	public boolean isFull() {
-		// TODO
-		return false;
+		return stacktop == maxsize - 1;
 	}
 	
 }
