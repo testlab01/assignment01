@@ -34,8 +34,11 @@ public class Stack implements StackInterface{
 
 	@Override
 	public void push(Object x) {
-		// TODO 
-		
+		if(isFull() != true) {
+			stack[++stacktop] = x;
+		} else {
+			System.err.println("Stack Overfloor");
+		}
 	}
 
 	@Override
