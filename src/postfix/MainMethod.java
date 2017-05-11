@@ -22,6 +22,10 @@ package postfix;
 public class MainMethod {
 
 	public static void main(String[] args) {
+
+		/** NOTE
+		 * assumption : User input is always correct postfix syntax *
+		 **/
 		PostfixEvaluator postfix = new PostfixEvaluator();
 		System.out.println(postfix.evaluate("23+5*")); // (2+3) * 5
 	}
