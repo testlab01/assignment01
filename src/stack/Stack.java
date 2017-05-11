@@ -43,8 +43,11 @@ public class Stack implements StackInterface{
 
 	@Override
 	public Object pop() {
-		// TODO 
-		return null;
+		if(isEmpty() != true){
+			return stack[stacktop--];
+		} else {
+			return null;
+		}
 	}
 
 	@Override
