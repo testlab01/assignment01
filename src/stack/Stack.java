@@ -19,6 +19,38 @@ limitations under the License.
 
 package stack;
 
-public class Stack {
-	//TODO
+import interfaces.StackInterface;
+
+public class Stack implements StackInterface{
+
+	@Override
+	public void push(Object x) {
+		// TODO 
+		
+	}
+
+	@Override
+	public Object pop() {
+		// TODO 
+		return null;
+	}
+
+	@Override
+	public Object peek() {
+		// TODO 
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO 
+		return false;
+	}
+
+	@Override
+	public boolean isFull() {
+		// TODO 
+		return false;
+	}
+	
 }
