@@ -19,8 +19,6 @@ limitations under the License.
 
 package stack;
 
-import java.util.Arrays;
-
 import interfaces.StackInterface;
 
 public class Stack implements StackInterface{
