@@ -22,8 +22,7 @@ package postfix;
 public class MainMethod {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		PostfixEvaluator postfix = new PostfixEvaluator();
+		System.out.println(postfix.evaluate("23+5*")); // (2+3) * 5
 	}
-
 }

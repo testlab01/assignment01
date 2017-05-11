@@ -20,6 +20,7 @@ limitations under the License.
 package postfix;
 
 import interfaces.PostfixInterface;
+import stack.Stack;
 
 public class PostfixEvaluator implements PostfixInterface{
 
@@ -31,8 +32,41 @@ public class PostfixEvaluator implements PostfixInterface{
 	}
 
 	@Override
+	//TODO What the hell you are doing prahveen -_- , is it good one
 	public int evaluate(String postfixExpresion) {
-		// TODO What the hell im going to do in this
-		return 0;
+		expr = postfixExpresion;
+		lenOfExpr = expr.length();
+		Stack stack = new Stack(lenOfExpr);
+
+		int i  = 0;
+		while(lenOfExpr > i){
+		if(isAnOperator(expr.charAt(i)) != true){
+				stack.push(Character.getNumericValue((char) expr.charAt(i)));
+			}else {
+				int operand1, operand2;
+				operand2 = (int)stack.pop();
+				operand1 = (int)stack.pop();
+
+				switch(expr.charAt(i)){
+					case '+' : stack.push((operand1 + operand2)); break;
+					case '-' : stack.push((operand1 - operand2)); break;
+					case '/' : stack.push((operand1 / operand2)); break;
+					case '*' : stack.push((operand1 * operand2)); break;
+				}
+			}
+			i++;
+		}
+		return (int) stack.peek();
+	}
+
+	//check given character is + - / *
+	private boolean isAnOperator(char c){
+		switch(c){
+			case '+' :
+			case '-' :
+			case '*' :
+			case '/' : return true;
+			default  : return false;
+		}
 	}
 }
