@@ -23,6 +23,13 @@ import interfaces.PostfixInterface;
 
 public class PostfixEvaluator implements PostfixInterface{
 
+	private String expr;
+	private int lenOfExpr;
+
+	public PostfixEvaluator(){
+		//TODO
+	}
+
 	@Override
 	public int evaluate(String postfixExpresion) {
 		// TODO What the hell im going to do in this
