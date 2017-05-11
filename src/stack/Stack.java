@@ -52,8 +52,7 @@ public class Stack implements StackInterface{
 
 	@Override
 	public boolean isEmpty() {
-		// TODO 
-		return false;
+		return (stacktop == -1);
 	}
 
 	@Override
