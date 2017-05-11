@@ -20,5 +20,5 @@ limitations under the License.
 package interfaces;
 
 public interface PostfixInterface {
-	//TODO
+	public int evaluate(String postfixExpresion);
 }
