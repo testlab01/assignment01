@@ -30,11 +30,9 @@ public class Recursive {
 		}else{
 			return findMax(getMax(numArray, length -1), numArray[length -1]);
 		}
-			
 	}
 	
 	private int findMax(int num1, int num2){
 		return num1 > num2 ? num1:num2;
 	}
-
 }
